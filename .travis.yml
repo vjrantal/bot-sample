@@ -1,3 +1,8 @@
 language: node_js
 node_js:
   - "4"
+before_install:
+  - wget https://aka.ms/bfemulator -O /tmp/BotFrameworkEmulator-Console.zip
+  - unzip /tmp/BotFrameworkEmulator-Console.zip -d /tmp/BotFrameworkEmulator-Console/
+  - export BOT_FRAMEWORK_EMULATOR_PATH=/tmp/BotFrameworkEmulator-Console/BFEmulator.exe
+  - brew install mono
