@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "4"
+os:
+  - osx
 before_install:
   - wget https://aka.ms/bfemulator -O /tmp/BotFrameworkEmulator-Console.zip
   - unzip /tmp/BotFrameworkEmulator-Console.zip -d /tmp/BotFrameworkEmulator-Console/
