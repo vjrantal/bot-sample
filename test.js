@@ -6,7 +6,7 @@ var Promise = require('bluebird');
 var Program = require('./Program.js');
 
 test('bot greets with name only at first run', function (t) {
-  var botProgram = new Program('node', ['app.js']);
+  var botProgram = new Program('node', ['index.js']);
 
   var emulatorProgram = new Program('mono', [process.env.BOT_FRAMEWORK_EMULATOR_PATH]);
 
