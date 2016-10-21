@@ -6,7 +6,11 @@
   "scripts": {
     "test": "node test.js"
   },
-  "author": "",
+  "author": "Ville Rantala",
+  "repository": {
+    "type" : "git",
+    "url" : "https://vjrantal@github.com/vjrantal/bot-sample.git"
+  },
   "license": "MIT",
   "dependencies": {
     "botbuilder": "^3.3.0",
