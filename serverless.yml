@@ -1,0 +1,13 @@
+service: bot-sample
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+functions:
+  post:
+    handler: index.post
+    events:
+      - http:
+          path: api/messages
+          method: post
