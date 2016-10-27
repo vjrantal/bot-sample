@@ -11,8 +11,7 @@ then
   git clone --quiet "https://${GIT_USER}:${GIT_PASSWORD}@${GIT_TARGET}" functions > /dev/null 2>&1
   cd functions
   git submodule init
-  git submodule update
-  git submodule foreach git pull origin master
+  git submodule update --remote --merge
   git commit -a -m "Deployment commit"
   git push --quiet origin master > /dev/null 2>&1
 fi
