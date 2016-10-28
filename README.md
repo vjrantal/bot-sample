@@ -1,5 +1,9 @@
 # Bot Sample
 
+See the latest build in Travis CI from:
+
+[![Build Status](https://travis-ci.org/vjrantal/bot-sample.svg?branch=master)](https://travis-ci.org/vjrantal/bot-sample)
+
 A clear and simple base case bot using the [Microsoft Bot Framework](https://dev.botframework.com) that demonstrates:
 
 * One way to automate bot testing 
@@ -7,6 +11,8 @@ A clear and simple base case bot using the [Microsoft Bot Framework](https://dev
 * LUIS.ai integration
 
 This can be useful to those looking to get started quickly with either or all of the three points above. 
+
+More information about the automated testing aspect of this project can be found from [this blog post](http://blog.vjrantal.net/2016/10/24/continuous-delivery-of-a-node-js-bot/).
 
 ## Notes for Azure Functions
 
@@ -23,11 +29,3 @@ For certain continuous integration deployment options, dependencies may not be a
 ```
 
 within site\wwwroot\[FUNCTION_DIR] (see above app settings documentation on how to access Kudu). For GitHub integration, the dependencies should already be resolved as part of the deployment process.
-
----
-
-See the latest build in Travis CI from:
-
-[![Build Status](https://travis-ci.org/vjrantal/bot-sample.svg?branch=master)](https://travis-ci.org/vjrantal/bot-sample)
-
-More information about the automated testing aspect of this project can be found from [this blog post](http://blog.vjrantal.net/2016/10/24/continuous-delivery-of-a-node-js-bot/).
