@@ -8,12 +8,12 @@
   },
   "author": "Ville Rantala",
   "repository": {
-    "type" : "git",
-    "url" : "https://vjrantal@github.com/vjrantal/bot-sample.git"
+    "type": "git",
+    "url": "https://github.com/vjrantal/bot-sample.git"
   },
   "license": "MIT",
   "dependencies": {
-    "botbuilder": "=3.3.0",
+    "botbuilder": "^3.4.2",
     "restify": "^4.1.1"
   },
   "devDependencies": {
