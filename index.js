@@ -7,24 +7,35 @@ var connector = new builder.ChatConnector({
   appPassword: process.env.CHAT_CONNECTOR_APP_PASSWORD
 });
 
-var bot = new builder.UniversalBot(connector, { persistConversationData: true });
+var bot = new builder.UniversalBot(connector);
 
-bot.dialog('/', function (session) {
-  session.send('%s, I heard: %s', session.userData.name, session.message.text);
-  session.send('Say something else...');
-});
+bot.dialog('/', [
+  function (session, args, next) {
+    if (!session.userData.name) {
+      session.beginDialog('/promptName');
+    } else {
+      next();
+    }
+  },
+  function (session, results) {
+    if (results.name) {
+      session.userData.name = results.name;
+      session.endDialog('Hi %s, say something to me and I will echo it back.', session.userData.name);
+    } else {
+      session.send('%s, I heard: %s', session.userData.name, session.message.text);
+      session.endDialog('Say something else...');
+    }
+  }
+]);
 
-// Install First Run middleware and dialog
-bot.use(builder.Middleware.firstRun({ version: 1.0, dialogId: '*:/firstRun' }));
-bot.dialog('/firstRun', [
+bot.dialog('/promptName', [
   function (session) {
     builder.Prompts.text(session, 'Hello... What is your name?');
   },
   function (session, results) {
-    // We'll save the users name and send them an initial greeting. All
-    // future messages from the user will be routed to the root dialog.
-    session.userData.name = results.response;
-    session.endDialog('Hi %s, say something to me and I will echo it back.', session.userData.name);
+    session.endDialogWithResult({
+      name: results.response
+    });
   }
 ]);
 
