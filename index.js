@@ -61,7 +61,7 @@ intents.matches('ChangeName', [
 
 bot.dialog('/promptName', [
   function (session) {
-    builder.Prompts.text(session, 'Howdy... What is your name?');
+    builder.Prompts.text(session, 'Hello... What is your name?');
   },
   function (session, results) {
     session.endDialogWithResult({
