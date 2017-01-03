@@ -12,6 +12,8 @@ This can be useful to those looking to get started quickly with either or all of
 
 To learn how to setup continuous deployment of this bot see: [Continuous deployment for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment)
 
+> An interesting thing to note if you're following the above article is the structure of the repository. It is important that you follow the structure specified. This source code (bot-sample) can be one of the sub-directory (not the main directory). Obvious, but good to note! :)
+
 To learn how to setup the necessary environment variables, see: [How to configure Azure Function app settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings). 
 
 For certain continuous integration deployment options, dependencies may not be automatically resolved. If you run into dependency errors, try getting the dependent botbuilder package by running:
