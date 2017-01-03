@@ -12,10 +12,15 @@ This can be useful to those looking to get started quickly with either or all of
 
 To learn how to setup continuous deployment of this bot see: [Continuous deployment for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment)
 
-To learn how to setup the necessary environment variables, see: [How to configure Azure Function app settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings).  
+To learn how to setup the necessary environment variables, see: [How to configure Azure Function app settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings). 
 
-> For Azure FTo get the dependent botbuilder package, run npm install within site\wwwroot\[FUNCTION_DIR]
- (see above app settings documentation on how to access Kudu).
+For certain continuous integration deployment options, dependencies may not be automatically resolved. If you run into dependency errors, try getting the dependent botbuilder package by running:
+
+```
+> npm install
+```
+
+within site\wwwroot\[FUNCTION_DIR] (see above app settings documentation on how to access Kudu). For GitHub integration, the dependencies should already be resolved as part of the deployment process.
 
 ---
 
