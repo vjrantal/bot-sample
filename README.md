@@ -8,12 +8,16 @@ A clear and simple base case bot using the [Microsoft Bot Framework](https://dev
 
 This can be useful to those looking to get started quickly with either or all of the three points above. 
 
+## Notes for Azure Functions
+
 To learn how to setup continuous deployment of this bot see: [Continuous deployment for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment)
 
 To learn how to setup the necessary environment variables, see: [How to configure Azure Function app settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings).  
 
-To get the dependent botbuilder package, run npm install within site\wwwroot\[FUNCTION_DIR]
+> For Azure FTo get the dependent botbuilder package, run npm install within site\wwwroot\[FUNCTION_DIR]
  (see above app settings documentation on how to access Kudu).
+
+---
 
 See the latest build in Travis CI from:
 
