@@ -12,12 +12,6 @@ module.exports = function (listener) {
         });
       };
 
-      if (!event.headers.hasOwnProperty('authorization')) {
-        // BotBuilder currently expects the header to be lower case so
-        // assign the value manually until the issue gets fixed.
-        event.headers.authorization = event.headers.Authorization;
-      }
-
       var req = {
         body: JSON.parse(event.body),
         headers: event.headers
